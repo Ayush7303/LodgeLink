@@ -1,0 +1,27 @@
+﻿@model IEnumerable<LodgeLink.Models.BookingRequest>
+
+@{
+    ViewData["Title"] = "Booked Amenities";
+    Layout = "~/Areas/Residents/Views/Shared/_Layout.cshtml";
+}
+<div class="container-fluid">
+    <div class="row">
+        @foreach(var item in Model)
+        {
+            <div class="col-lg-4 my-2">
+                <div class="card h-100 p-3">
+                    <div class="overflow-hidden position-relative border-radius-lg bg-cover h-100" style="background-image: url('~/images/@item.Facility.ImageURL');">
+                        <span class="mask bg-gradient-dark"></span>
+                        <div class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
+                            <h5 class="text-white font-weight-bolder mb-4 pt-2">@item.Facility.FacilityName</h5>
+                            <p class="text-white">@item.Notes</p>
+                            <p class="text-white text-sm font-weight-bold mb-0 icon-move-right mt-auto" href="javascript:;">
+                                @item.Status
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

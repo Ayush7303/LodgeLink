@@ -1,0 +1,191 @@
+﻿@{
+    ViewData["Title"] = "Home";
+    Layout = "~/Areas/Residents/Views/Shared/_Layout.cshtml";
+    var eventList = ViewData["EventList"] as List<Event>;
+}
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item">
+            <div class="page-header min-vh-75 m-3 border-radius-xl" style="background-image: url('/images/slideshow/s4.jpg');">
+                <span class="mask bg-gradient-dark"></span>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 my-auto">
+                            <h4 class="text-white mb-0 fadeIn1 fadeInBottom">Welcome to LodgeLink</h4>
+                            <h1 class="text-white fadeIn2 fadeInBottom">Where Comfort Meets Community</h1>
+                            <p class="lead text-white opacity-8 fadeIn3 fadeInBottom">Discover the perfect blend of modern living and community harmony at LodgeLink. Nestled in Althan, our residency is designed to provide a sanctuary for those seeking a vibrant and fulfilling lifestyle.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="page-header min-vh-75 m-3 border-radius-xl" style="background-image: url('/images/slideshow/s2.jpg');">
+                <span class="mask bg-gradient-dark"></span>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 my-auto">
+                            <h4 class="text-white mb-0 fadeIn1 fadeInBottom">"Elevate Your Living Experience""</h4>
+                            <h1 class="text-white fadeIn2 fadeInBottom">Unveiling LodgeLink:A Symphony of Comfort and Community</h1>
+                            <p class="lead text-white opacity-8 fadeIn3 fadeInBottom">Step into a world where luxury meets community at LodgeLink. We invite you to indulge in a lifestyle that transcends the ordinary, where every detail is meticulously crafted to elevate your living experience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item active">
+            <div class="page-header min-vh-75 m-3 border-radius-xl" style="background-image: url('/images/slideshow/s3.jpg');">
+                <span class="mask bg-gradient-dark"></span>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 my-auto">
+                            <h4 class="text-white mb-0 fadeIn1 fadeInBottom">"Beyond Walls, We Build Dreams"</h4>
+                            <h1 class="text-white fadeIn2 fadeInBottom">Unlocking LodgeLink:Your Gateway to Inspired Living</h1>
+                            <p class="lead text-white opacity-8 fadeIn3 fadeInBottom">Welcome to LodgeLink, where we transcend the conventional to create an environment that goes beyond mere living. Here, we believe in building not just homes but dreams – a place where aspirations take flight.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="min-vh-75 position-absolute w-100 top-0">
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon position-absolute bottom-50" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon position-absolute bottom-50" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </a>
+    </div>
+</div>
+<div class="container-fluid">
+    <div id="carouselExampleControls" class="carousel slide my-1" data-bs-ride="carousel">
+        <div class="row">
+            <div class="mx-2">
+                <h4>What's New</h4>
+            </div>
+        </div>
+        <div class="carousel-inner" id="carouselInner">
+            @foreach (var events in eventList)
+            {
+                <div class="carousel-item">
+                    <div class="page-header min-vh-45 m-3 border-radius-xl bg-light">
+                        <span class="mask bg-gradient-dark"></span>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6 my-auto">
+                                    <h4 class="text-white mb-0 fadeIn1 fadeInBottom">@events.Start.Value.ToShortDateString()</h4>
+                                    <h1 class="text-white fadeIn2 fadeInBottom">@events.Subject</h1>
+                                    <p class="lead text-white opacity-8 fadeIn3 fadeInBottom">@events.Description</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+    </div>
+</div>
+
+<div class="container-fluid bg-none">
+    <div class="card bg-none">
+        <div class="card-header pb-0">
+            <h4>Our Services</h4>
+        </div>
+        <div class="row mx-2 my-3">
+            @foreach (Facility item in Model.Services)
+            {
+                <div class="col-md-3 mx-auto my-2">
+                    <div class="card card-profile card-plain">
+                        <div class="card-body text-center bg-white shadow border-radius-lg p-3">
+                            <div>
+                                <img class="w-100 border-radius-md min-vh-25" src="@item.ImageURL">
+                            </div>
+                            <p class="mb-0 text-xs font-weight-bolder text-warning text-gradient text-uppercase my-1">@item.FacilityName</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<div class="container-fluid my-3">
+    <div class="card">
+        <div class="card-header pb-0">
+            <h4>Our Progress</h4>
+        </div>
+        <div class="card-body">
+            <div class="row mx-3 text-center">
+                <div class="col-md-2 mx-auto">
+                    <h2 class="text-gradient text-primary" id="houses_count">@ViewData["houses"]</h2>
+                    <input type="hidden" id="houses" value="@ViewData["houses"]" />
+                    <h6>Houses</h6>
+                </div>
+                <div class="col-md-2 mx-auto">
+                    <h2 class="text-secondary" id="owners_count">@ViewData["owners"]</h2>
+                    <input type="hidden" id="owners" value="@ViewData["owners"]" />
+                    <h6>Owners</h6>
+                </div>
+                <div class="col-md-2 mx-auto">
+                    <h2 class="text-gradient text-danger" id="services_count">@ViewData["services"]</h2>
+                    <input type="hidden" id="services" value="@ViewData["services"]" />
+                    <h6>Services</h6>
+                </div>
+                <div class="col-md-2 mx-auto">
+                    <h2 class="text-gradient text-success" id="requests_count">@ViewData["requests"]</h2>
+                    <input type="hidden" id="requests" value="@ViewData["requests"]" />
+                    <h6>Requests</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/plugins/jquery/jquery.min.js"></script>
+
+<script>
+    function displayNumbers(value){
+        let end = document.getElementById(value).value;
+        setInterval(() => {
+            for (i = 1; i <= end; i++) {
+                document.getElementById(value + "_count").innerHTML = i;
+            }
+        }, 1000);
+    }
+
+    displayNumbers("houses");
+    displayNumbers("owners");
+    displayNumbers("services");
+    displayNumbers("requests");
+</script>
+<script>
+    // Wait for the document to be ready
+    $(document).ready(function () {
+        // Get all carousel items
+        var carouselItems = $('#carouselInner .carousel-item');
+
+        // Function to show events in a loop
+        function showEvents(index) {
+            // Remove 'active' class from all items
+            carouselItems.removeClass('active');
+
+            // Add 'active' class to the current item
+            carouselItems.eq(index).addClass('active');
+
+            // Wait for 5 seconds and then show the next event
+            setTimeout(function () {
+                // Increment the index for the next event
+                index++;
+
+                // If there are more events, continue the loop
+                if (index < carouselItems.length) {
+                    showEvents(index);
+                }
+            }, 2000);
+        }
+
+        // Start the loop with the first event
+        showEvents(0);
+    });
+</script>

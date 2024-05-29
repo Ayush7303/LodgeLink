@@ -1,0 +1,180 @@
+﻿@{
+    ViewData["Title"] = "Bills";
+}
+@{
+    int Count = 1;
+}
+<div class="container-fluid">
+    @foreach (var item in Model)
+    {
+        @if (item.Status == true)
+        {
+            <div class="my-3">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h6 class="d-flex">
+                                    @item.Bill.Title &nbsp;
+
+                                    <span class="btn btn-icon-only btn-rounded btn-outline-info mb-0 me-3 btn-sm d-flex align-items-center justify-content-center"><i class="ni ni-check-bold"></i></span>
+
+                                </h6>
+                            </div>
+                            <div class="col-lg-6 text-end">
+                                <i class="ni ni-bold-down" data-bs-toggle="collapse" data-bs-target="#collapse-id-@item.BillPaymentId" id="bill-icon-@item.BillId"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body collapse" id="collapse-id-@item.BillPaymentId">
+                        <div class="row">
+                            <div class="col-lg-9">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <tr>
+                                            <td>
+                                                <h5 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Maintenence Cost</h5>
+                                            </td>
+                                            <td>₹ @ViewData["Maintenence"]</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h5 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Miscelaneous Cost</h5>
+                                            </td>
+                                            <td>₹ 220</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h5 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Service Charge</h5>
+                                            </td>
+                                            <td>₹ 100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h5 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Late Charge</h5>
+                                            </td>
+                                            <td>₹ @ViewData["LateCharge"+Count]</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h5 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Outstanding Charge</h5>
+                                            </td>
+                                            <td>₹ 0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h5 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Event Charge</h5>
+                                            </td>
+                                            <td>₹ 0</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="card">
+
+                                    <div class="card-header mx-4 p-3 text-center">
+                                        <div class="icon icon-shape icon-lg bg-gradient-primary shadow text-center border-radius-lg">
+                                            <i class="fab fa-paypal opacity-10"></i>
+                                        </div>
+                                    </div>
+                                    <div class="card-body pt-0 p-3 text-center">
+                                        <h6 class="text-center mb-0">Paid</h6>
+                                        <span class="text-xs">Total Amount</span>
+                                        <hr class="horizontal dark my-3">
+                                        <h5 class="mb-0 text-info">₹ @item.PaidAmount</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="my-3">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h6 class="d-flex">
+                                    @item.Bill.Title &nbsp;
+
+                                    <span class="btn btn-icon-only btn-rounded btn-outline-danger mb-0 me-3 btn-sm d-flex align-items-center justify-content-center"><i class="fas fa-exclamation"></i></span>
+                                </h6>
+                            </div>
+                            <div class="col-lg-6 text-end">
+                                <i class="ni ni-bold-down" data-bs-toggle="collapse" data-bs-target="#collapse-id-@item.BillPaymentId" id="bill-icon-@item.BillId"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body collapse" id="collapse-id-@item.BillPaymentId">
+                        <div class="row">
+                            <div class="col-lg-9">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <tr>
+                                            <td>
+                                                <h5 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Maintenence Cost</h5>
+                                            </td>
+                                            <td>₹ @ViewData["Maintenence"]</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h5 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Miscelaneous Cost</h5>
+                                            </td>
+                                            <td>₹ 220</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h5 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Service Charge</h5>
+                                            </td>
+                                            <td>₹ 100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h5 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Late Charge</h5>
+                                            </td>
+                                            <td>₹ @ViewData["LateCharge"+Count]</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h5 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Outstanding Charge</h5>
+                                            </td>
+                                            <td>₹ 0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h5 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Event Charge</h5>
+                                            </td>
+                                            <td>₹ 0</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="card">
+                                    <div class="card-header mx-4 p-3 text-center">
+                                        <a href="Create?id=@item.BillPaymentId" class="icon icon-shape icon-lg bg-gradient-primary shadow text-center border-radius-lg">
+                                            <i class="fab fa-paypal opacity-10"></i>
+                                        </a>
+                                    </div>
+                                    <div class="card-body pt-0 p-3 text-center">
+                                        <h6 class="text-center mb-0">Pay</h6>
+                                        <span class="text-xs">Total Amount</span>
+                                        <hr class="horizontal dark my-3">
+                                        <h5 class="mb-0">₹ @item.Amount</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+        Count++;
+    }
+
+</div>

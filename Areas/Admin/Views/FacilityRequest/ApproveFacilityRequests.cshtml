@@ -1,0 +1,35 @@
+﻿@model List<LodgeLink.Models.BookingRequest>
+
+    @{
+    ViewData["Title"] = "Pending Facility Requests";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Request Date</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <!-- Add other columns as needed -->
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var request in Model)
+        {
+            <tr>
+                <td>@request.RequestDate</td>
+                <td>@request.StartDate</td>
+                <td>@request.EndDate</td>
+
+                <!-- Add other columns as needed -->
+                <td>
+                    <form asp-action="ApproveFacilityRequests" method="post">
+                        <input type="hidden" name="requestId" value="@request.RequestId" />
+                        <button type="submit" class="btn btn-success">Approve</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

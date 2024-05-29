@@ -1,0 +1,39 @@
+﻿@model LodgeLink.Models.Role
+
+@{
+    ViewData["Title"] = "Create Role";
+}
+
+
+<hr />
+<div class="card-body">
+    <form asp-action="Create">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="row">
+            <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="RoleName" class="control-label"></label>
+                <input asp-for="RoleName" class="form-control" />
+                <span asp-validation-for="RoleName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RoleDescription" class="control-label"></label>
+                <input asp-for="RoleDescription" class="form-control" />
+                <span asp-validation-for="RoleDescription" class="text-danger"></span>
+            </div>
+                <div class="form-group">
+
+                    <input type="submit" value="Create" class="btn btn-block btn-primary" />
+                </div>
+            </div>
+        </div>
+    </form>
+
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

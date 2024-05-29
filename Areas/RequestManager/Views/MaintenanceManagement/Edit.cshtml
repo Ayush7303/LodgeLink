@@ -1,0 +1,55 @@
+﻿@model LodgeLink.Models.MaintenanceRequest
+
+@{
+    ViewData["Title"] = "Assign Maintenance Staff";
+    Layout = "~/Areas/RequestManager/Views/Shared/_Layout.cshtml";
+}
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="RequestId" />
+            <input asp-for="ResidentId" class="form-control" type="hidden" />
+            <input asp-for="PropertyId" class="form-control" type="hidden" />
+
+
+
+            <input asp-for="RequestDate" class="form-control" type="hidden" />
+
+            <input asp-for="Description" class="form-control" type="hidden" />
+
+            <input asp-for="Status" class="form-control" type="hidden" />
+               
+            <div class="form-group">
+                <label asp-for="UserId" class="control-label"></label>
+                <select asp-for="UserId" class="form-control" asp-items="ViewBag.UserId"></select>
+                <span asp-validation-for="UserId" class="text-danger"></span>
+            </div>
+
+            <input asp-for="CompletionDate" class="form-control" type="hidden" />
+
+            <input asp-for="Priority" class="form-control" type="hidden" />
+
+            <input asp-for="Category" class="form-control" type="hidden" />
+
+            <input asp-for="Notes" class="form-control" type="hidden" />
+
+            <input asp-for="Attachments" class="form-control" type="hidden" />
+                
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

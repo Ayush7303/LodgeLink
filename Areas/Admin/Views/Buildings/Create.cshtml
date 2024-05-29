@@ -1,0 +1,82 @@
+﻿@model LodgeLink.Models.Building
+
+@{
+    ViewData["Title"] = "Create Building";
+}
+<hr />
+<div class="card-body">
+    <form asp-action="Create">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                <label asp-for="BuildingName" class="control-label"></label>
+                <input asp-for="BuildingName" class="form-control" />
+                <span asp-validation-for="BuildingName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Address" class="control-label"></label>
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalFloors" class="control-label"></label>
+                <input asp-for="TotalFloors" class="form-control" />
+                <span asp-validation-for="TotalFloors" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="TotalUnits" class="control-label"></label>
+                <input asp-for="TotalUnits" class="form-control" />
+                <span asp-validation-for="TotalUnits" class="text-danger"></span>
+            </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="BuildingType" class="control-label"></label>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="BuildingType" name="BuildingType" value="Residential" checked>Residential
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="BuildingType" name="BuildingType" value="Commercial">Commercial
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <span asp-validation-for="BuildingType" class="text-danger"></span>
+                </div>
+           
+
+            <div class="form-group">
+                <label asp-for="ConstructionDate" class="control-label"></label>
+                <input asp-for="ConstructionDate" class="form-control" />
+                <span asp-validation-for="ConstructionDate" class="text-danger"></span>
+            </div>
+           
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                  
+                    <input type="submit" value="Create" class="btn btn-block btn-primary" />
+            </div>
+        </div>
+    </div>
+    </form>
+
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+

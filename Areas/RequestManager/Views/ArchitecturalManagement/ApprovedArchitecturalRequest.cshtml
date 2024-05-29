@@ -1,0 +1,117 @@
+﻿@model IEnumerable<LodgeLink.Models.ArchitecturalRequest>
+@{
+    ViewData["Title"] = "Approved Requests";
+    Layout = "~/Areas/RequestManager/Views/Shared/_Layout.cshtml";
+
+}
+
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.ResidentId)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Property.PeopertyNumber)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Property.Building.BuildingName)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.RequestDate)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Description)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Status)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.ApprovalDate)
+                                    </th>
+                                    <th>
+                                        @* @Html.DisplayNameFor(model => model.User.UserName) *@Approved By
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.CompletionDate)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Notes)
+                                    </th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Resident.FirstName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Property.PeopertyNumber)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Property.Building.BuildingName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.RequestDate)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Description)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Status)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.ApprovalDate)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.User.UserName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.CompletionDate)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Notes)
+                                        </td>
+
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+    </div>
+</section>
+<script src="~/plugins/jquery/jquery.min.js"></script>
+
+<!-- Page specific script -->
+<script>
+    $(function () {
+        $("#example1").DataTable({
+            "responsive": true, "lengthChange": false, "autoWidth": false,
+            // "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+            "buttons": ["excel", "pdf", "print"]
+
+        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+    });
+</script>
+
+
+
+

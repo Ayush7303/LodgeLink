@@ -1,0 +1,43 @@
+﻿@model IEnumerable<LodgeLink.Models.Visitor>
+
+@{
+    ViewData["Title"] = "Visitor Log";
+
+}
+
+<div class="card card-solid" id="visitorList">
+    <div class="card-body pb-0">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
+                    <div class="card bg-light d-flex flex-fill">
+                        <div class="card-header text-muted border-bottom-0">
+                            @Html.DisplayFor(modelItem => item.Property.PeopertyNumber)
+                        </div>
+                        <div class="card-body pt-0">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2 class="lead"><b>@Html.DisplayFor(modelItem => item.VisitorName)</b></h2>
+                                    <ul class="ml-4 mb-0 fa-ul text-muted">
+                                        <li class="small"><span class="fa-li"><i class="fa-solid fa-question"></i></span> Purpose: @Html.DisplayFor(modelItem => item.Purpose)</li>
+                                        <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Phone +91: @Html.DisplayFor(modelItem => item.ContactNumber)</li>
+                                        <li class="small"><span class="fa-li"><i class="fa-solid fa-car"></i></span> Vehicle Details: @Html.DisplayFor(modelItem => item.VehicleDetails)</li>
+                                        <li class="small"><span class="fa-li"><i class="fa-regular fa-calendar-minus"></i></span> Check-In Time: @Html.DisplayFor(modelItem => item.CheckInTime)</li>
+                                        <li class="small"><span class="fa-li"><i class="fa-solid fa-calendar-minus"></i></span> Check-Out Time: @Html.DisplayFor(modelItem => item.CheckOutTime)</li>
+                                        <li class="small"><span class="fa-li"><i class="fa-regular fa-clock"></i></span> Visit Date: @Html.DisplayFor(modelItem => item.VisitDate)</li>
+                                    </ul>
+                                </div>
+                                <div class="col-5 text-center">
+                                    <img src="@Html.DisplayFor(modelItem => item.ImageURL)" alt="Profile Image" class="img-circle img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+
+        </div>
+    </div>
+</div>

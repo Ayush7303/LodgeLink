@@ -1,0 +1,72 @@
+﻿@model LodgeLink.Models.Facility
+
+@{
+    ViewData["Title"] = "Book Amenity";
+    Layout = "~/Areas/Residents/Views/Shared/_Layout.cshtml";
+}
+<div class="row mt-4">
+    <div class="col-lg-7 mb-lg-0 mb-4">
+        <div class="card">
+            <div class="card-body p-3">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="d-flex flex-column h-100">
+                            <p class="mb-1 pt-2 text-bold">@Model.FacilityName</p>
+                            <h5 class="font-weight-bolder">@Model.Description</h5>
+                            <p>Capacity : @Model.Capacity</p>
+                            <p>Location : @Model.Location</p>
+                            <p>Booking Fees : ₹ @Model.BookingFee</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 ms-auto text-center mt-5 mt-lg-0">
+                        <div class="border-radius-lg h-100">
+                            <div class="position-relative d-flex align-items-center justify-content-center h-100">
+                                <img class="w-100 position-relative z-index-2 pt-4 shadow" src="@Model.ImageURL" alt="rocket">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <form action="PaymentViewFacility" onsubmit="return checkDates();">
+                        <input type="hidden" name="id" value="@Model.FacilityId" hidden />
+                        <div class="d-flex">
+                            <div class="form-group ">
+                                <label class="control-label">Starting Date</label>
+                                <input type="date" name="StartDate" class="form-control" id="start" />
+                            </div>
+                            <div class="form-group mx-3">
+                                <label class="control-label">Ending Date</label>
+                                <input type="date" name="EndDate" class="form-control" id="end" />
+                            </div>
+                            <h6 id="DateError"></h6>
+                            @if (TempData["FacilityError"] != "")
+                            {
+                                <h6 class="text-danger my-2">@TempData["FacilityError"]</h6>
+                            }
+                        </div>
+                        <button type="submit" class="text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto bg-none border-0">
+                            Book
+                            <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function checkDates() {
+        let start = document.getElementById("start").value;
+        let end = document.getElementById("end").value;
+        let DateError = document.getElementById("DateError");
+
+        if (start === "" || end === "") {
+            DateError.innerHTML = "Please Give Start Or End Date Else if One day booking then select same date in both.";
+            DateError.style.color = "red";
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+</script>

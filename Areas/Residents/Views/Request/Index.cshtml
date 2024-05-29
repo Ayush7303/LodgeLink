@@ -1,0 +1,402 @@
+﻿@{
+    ViewData["Title"] = "Requests";
+}
+
+@model dynamic
+
+<div class="row mt-4">
+    <div class="card h-100 mb-4">
+        <div class="card-header pb-0 px-3">
+            <div class="row">
+                <div class="col-md-6">
+                    <h6 class="mb-0">My Requests (Architectural/Maintenance)</h6>
+                </div>
+                <div class="col-md-6 text-end">
+                    <a class="btn btn-primary btn-sm mb-0" asp-area="Residents" asp-controller="Request" asp-action="Create">New Request</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-body pt-4 p-3">
+                <h6 class="text-uppercase text-body text-xs font-weight-bolder my-3">This Month</h6>
+
+                <table class="border-none w-100">
+                    <tbody>
+                        <tr><td>
+                            <h6 class="text-uppercase text-body text-xs  my-3">Architectural Request</h6>
+
+                        </td></tr>
+                    @foreach (ArchitecturalRequest item in Model.Architecture)
+                    {
+                        @if (item.Status == "Approved" && item.RequestDate.Value.Month == DateTime.Now.Month)
+                        {
+                            <tr class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <button class="btn btn-icon-only btn-rounded btn-outline-info mb-0 me-3 btn-sm d-flex align-items-center justify-content-center"><i class="ni ni-check-bold"></i></button>
+                                        <div class="d-flex flex-column">
+                                            <h6 class="mb-1 text-dark text-sm">@item.Description</h6>
+                                            <span class="text-xs">@item.RequestDate</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center font-weight-bold">
+                                        <h6 class="text-dark text-sm text-gradient">@item.Notes</h6>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center font-weight-bold">
+                                        <h6 class="text-dark text-sm text-gradient">At @item.ApprovalDate Approved</h6>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center text-sm font-weight-bold">
+                                        <p class=" text-info text-gradient">Approved</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                        else if (item.Status == "Pending" && item.RequestDate.Value.Month == DateTime.Now.Month)
+                        {
+                            <tr class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <button class="btn btn-icon-only btn-rounded btn-outline-dark mb-0 me-3 btn-sm d-flex align-items-center justify-content-center"><i class="fas fa-exclamation"></i></button>
+                                        <div class="d-flex flex-column">
+                                            <h6 class="mb-1 text-dark text-sm">@item.Description</h6>
+                                            <span class="text-xs">@item.RequestDate</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center font-weight-bold">
+                                        <h6 class="text-dark text-sm text-gradient">@item.Notes</h6>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center font-weight-bold">
+                                        <h6 class="text-dark text-sm text-gradient">Not Yet Completed!!</h6>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center text-sm font-weight-bold">
+                                        <p class=" text-dark text-gradient">Pending</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                        else if (item.Status == "Refused" && item.RequestDate.Value.Month == DateTime.Now.Month)
+                        {
+                            <tr class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <button class="btn btn-icon-only btn-rounded btn-outline-danger mb-0 me-3 btn-sm d-flex align-items-center justify-content-center"><i class="fa-solid fa-xmark"></i></button>
+                                        <div class="d-flex flex-column">
+                                            <h6 class="mb-1 text-dark text-sm">@item.Description</h6>
+                                            <span class="text-xs">@item.RequestDate</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center font-weight-bold">
+                                        <h6 class="text-dark text-sm text-gradient">@item.Notes</h6>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center font-weight-bold">
+                                        <h6 class="text-dark text-sm text-gradient">At @item.ApprovalDate Refused</h6>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center text-sm font-weight-bold">
+                                        <p class=" text-danger text-gradient">Refused</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    <tr><td>
+                            <h6 class="text-uppercase text-body text-xs my-3">Maintenance Request</h6>
+
+                    </td></tr>
+                    @foreach (MaintenanceRequest item in Model.Maintanance)
+                    {
+                        @if (item.Status == "Completed" && item.RequestDate.Value.Month == DateTime.Now.Month)
+                        {
+                            <tr class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <button class="btn btn-icon-only btn-rounded btn-outline-info mb-0 me-3 btn-sm d-flex align-items-center justify-content-center"><i class="ni ni-check-bold"></i></button>
+                                        <div class="d-flex flex-column">
+                                            <h6 class="mb-1 text-dark text-sm">@item.Description</h6>
+                                            <span class="text-xs">@item.RequestDate</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center font-weight-bold">
+                                        <h6 class="text-dark text-sm text-gradient">@item.Notes</h6>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center font-weight-bold">
+                                        <h6 class="text-dark text-sm text-gradient">At @item.CompletionDate Completed</h6>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center text-sm font-weight-bold">
+                                        <p class=" text-info text-gradient">Completed</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                        else if (item.Status == "Pending" && item.RequestDate.Value.Month == DateTime.Now.Month)
+                        {
+                            <tr class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <button class="btn btn-icon-only btn-rounded btn-outline-dark mb-0 me-3 btn-sm d-flex align-items-center justify-content-center"><i class="fas fa-exclamation"></i></button>
+                                        <div class="d-flex flex-column">
+                                            <h6 class="mb-1 text-dark text-sm">@item.Description</h6>
+                                            <span class="text-xs">@item.RequestDate</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center font-weight-bold">
+                                        <h6 class="text-dark text-sm text-gradient">@item.Notes</h6>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center font-weight-bold">
+                                        <h6 class="text-dark text-sm text-gradient">Not Yet Completed!!</h6>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center text-sm font-weight-bold">
+                                        <p class=" text-dark text-gradient">Pending</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                        else if (item.Status == "Refused" && item.RequestDate.Value.Month == DateTime.Now.Month)
+                        {
+                            <tr class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <button class="btn btn-icon-only btn-rounded btn-outline-danger mb-0 me-3 btn-sm d-flex align-items-center justify-content-center"><i class="fas fa-exclamation"></i></button>
+                                        <div class="d-flex flex-column">
+                                            <h6 class="mb-1 text-dark text-sm">@item.Description</h6>
+                                            <span class="text-xs">@item.RequestDate</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center font-weight-bold">
+                                        <h6 class="text-dark text-sm text-gradient">@item.Notes</h6>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center font-weight-bold">
+                                        <h6 class="text-dark text-sm text-gradient">At @item.CompletionDate Completed</h6>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center text-sm font-weight-bold">
+                                        <p class=" text-danger text-gradient">Refused</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    </tbody>
+                </table>
+                
+                <h6 class="text-uppercase text-body text-xs font-weight-bolder my-3">Previous Month</h6>
+            <table class="border-none w-100">
+                <tbody>
+                    @foreach (ArchitecturalRequest item in Model.Architecture)
+                    {
+                        @if (item.Status == "Completed" && item.RequestDate.Value.Month < DateTime.Now.Month)
+                        {
+                            <tr class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <button class="btn btn-icon-only btn-rounded btn-outline-info mb-0 me-3 btn-sm d-flex align-items-center justify-content-center"><i class="ni ni-check-bold"></i></button>
+                                        <div class="d-flex flex-column">
+                                            <h6 class="mb-1 text-dark text-sm">@item.Description</h6>
+                                            <span class="text-xs">@item.RequestDate</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center font-weight-bold">
+                                        <h6 class="text-dark text-sm text-gradient">@item.Notes</h6>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center font-weight-bold">
+                                        <h6 class="text-dark text-sm text-gradient">At @item.CompletionDate Completed</h6>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center text-sm font-weight-bold">
+                                        <p class=" text-info text-gradient">Completed</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                        else if (item.Status == "Pending" && item.RequestDate.Value.Month < DateTime.Now.Month)
+                        {
+                            <tr class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <button class="btn btn-icon-only btn-rounded btn-outline-dark mb-0 me-3 btn-sm d-flex align-items-center justify-content-center"><i class="fas fa-exclamation"></i></button>
+                                        <div class="d-flex flex-column">
+                                            <h6 class="mb-1 text-dark text-sm">@item.Description</h6>
+                                            <span class="text-xs">@item.RequestDate</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center font-weight-bold">
+                                        <h6 class="text-dark text-sm text-gradient">@item.Notes</h6>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center font-weight-bold">
+                                        <h6 class="text-dark text-sm text-gradient">Not Yet Completed!!</h6>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center text-sm font-weight-bold">
+                                        <p class=" text-dark text-gradient">Pending</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                        else if (item.Status == "Rejected" && item.RequestDate.Value.Month < DateTime.Now.Month)
+                        {
+                            <tr class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <button class="btn btn-icon-only btn-rounded btn-outline-danger mb-0 me-3 btn-sm d-flex align-items-center justify-content-center"><i class="fas fa-exclamation"></i></button>
+                                        <div class="d-flex flex-column">
+                                            <h6 class="mb-1 text-dark text-sm">@item.Description</h6>
+                                            <span class="text-xs">@item.RequestDate</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center font-weight-bold">
+                                        <h6 class="text-dark text-sm text-gradient">@item.Notes</h6>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center font-weight-bold">
+                                        <h6 class="text-dark text-sm text-gradient">At @item.CompletionDate Completed</h6>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center text-sm font-weight-bold">
+                                        <p class=" text-danger text-gradient">Rejected</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    @foreach (MaintenanceRequest item in Model.Maintanance)
+                    {
+                        @if (item.Status == "Completed" && item.RequestDate.Value.Month < DateTime.Now.Month)
+                        {
+                            <tr class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <button class="btn btn-icon-only btn-rounded btn-outline-info mb-0 me-3 btn-sm d-flex align-items-center justify-content-center"><i class="ni ni-check-bold"></i></button>
+                                        <div class="d-flex flex-column">
+                                            <h6 class="mb-1 text-dark text-sm">@item.Description</h6>
+                                            <span class="text-xs">@item.RequestDate</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center font-weight-bold">
+                                        <h6 class="text-dark text-sm text-gradient">@item.Notes</h6>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center font-weight-bold">
+                                        <h6 class="text-dark text-sm text-gradient">At @item.CompletionDate Completed</h6>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center text-sm font-weight-bold">
+                                        <p class=" text-info text-gradient">Completed</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                        else if (item.Status == "Pending" && item.RequestDate.Value.Month < DateTime.Now.Month)
+                        {
+                            <tr class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <button class="btn btn-icon-only btn-rounded btn-outline-dark mb-0 me-3 btn-sm d-flex align-items-center justify-content-center"><i class="fas fa-exclamation"></i></button>
+                                        <div class="d-flex flex-column">
+                                            <h6 class="mb-1 text-dark text-sm">@item.Description</h6>
+                                            <span class="text-xs">@item.RequestDate</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center font-weight-bold">
+                                        <h6 class="text-dark text-sm text-gradient">@item.Notes</h6>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center font-weight-bold">
+                                        <h6 class="text-dark text-sm text-gradient">Not Yet Completed!!</h6>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center text-sm font-weight-bold">
+                                        <p class=" text-dark text-gradient">Pending</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                        else if (item.Status == "Rejected" && item.RequestDate.Value.Month < DateTime.Now.Month)
+                        {
+                            <tr class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <button class="btn btn-icon-only btn-rounded btn-outline-danger mb-0 me-3 btn-sm d-flex align-items-center justify-content-center"><i class="fas fa-exclamation"></i></button>
+                                        <div class="d-flex flex-column">
+                                            <h6 class="mb-1 text-dark text-sm">@item.Description</h6>
+                                            <span class="text-xs">@item.RequestDate</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center font-weight-bold">
+                                        <h6 class="text-dark text-sm text-gradient">@item.Notes</h6>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center font-weight-bold">
+                                        <h6 class="text-dark text-sm text-gradient">At @item.CompletionDate Completed</h6>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center text-sm font-weight-bold">
+                                        <p class=" text-danger text-gradient">Rejected</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

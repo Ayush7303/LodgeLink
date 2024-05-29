@@ -1,0 +1,120 @@
+﻿@{
+    Layout = null;
+}
+@model LodgeLink.Models.User
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/LodgeLink.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+
+</head>
+
+<body>
+    @if (TempData["successl"] != null)
+    {
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+        <script type="text/javascript">
+            toastr.success('@TempData["successl"]');
+        </script>
+    }
+    @if (TempData["errorl"] != null)
+    {
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+        <script type="text/javascript">
+            toastr.error('@TempData["errorl"]');
+        </script>
+    }
+
+    <div class="box">
+    <form method="POST" id="login">
+        <div class="head1">Login</div>
+
+            <div class="my-2">
+                <select id="rd" name="roleid" asp-for="RoleId" class="form-control">
+                    @foreach (var role in ViewBag.Roles)
+                    {
+                        <option value="@role.Value">@role.Text</option>
+                    }
+                </select>
+            </div>
+            <div class="my-2">
+                <input type="text" class="form-control border border-2 border-bottom border-primary" name="username" placeholder="Email/Username"/>
+            </div>
+            <div class="my-2">
+                <input type="password" class="form-control border border-2 border-bottom border-primary" name="password" placeholder="Password"/>
+            </div>
+            <div class="my-2">
+                <input type="submit" class="btn btn-primary" value="Login" />
+               
+            </div>
+            <div class="my-2 text-white text-end">
+                Forgot Password ? <a href="Identity/Identity/ForgotPassword" class="text-decoration-none">Reset</a>
+            </div>
+        <!-- <div class="m"><a href="./" id="linkforgotpass">Forgot your password?</a></div> -->
+
+</form>
+</div>
+@* 
+    <div class="container-fluid main-box px-5">
+        <div class="row h-100 mx-5 px-5">
+            <div class="col-md-6 my-auto py-5 border border-5 border-primary">
+                <div class="py-5 mx-3">
+                    <img src="~/images/logo.png" width="80%" class="mx-4" />
+                </div>
+            </div>
+            <div class="col-md-6 my-auto border border-1 border-primary">
+                <div class="py-4 mx-auto">
+                    <div class="row my-4 text-center">
+                        <h1><i class="fa-solid fa-key login-key"></i>&nbsp;Login</h1>
+                    </div>
+                    <div class="row my-4">
+                        <div class="col-md-8 mx-auto">
+                            <form method="post">
+                                <div class="my-2">
+                                    <label for="rd">Select Role:</label>
+                                    <select id="rd" name="roleid" asp-for="RoleId" class="form-control">
+                                        @foreach (var role in ViewBag.Roles)
+                                        {
+                                            <option value="@role.Value">@role.Text</option>
+                                        }
+                                    </select>
+                               
+                                </div>
+                                <div class="my-2">
+                                    <label class="form-label fw-bold mb-0">Username / Email</label>
+                                    <input type="text" class="form-control border border-2 border-bottom border-primary" name="username" />
+                                </div>
+                                <div class="my-2">
+                                    <label class="form-label fw-bold mb-0">Password</label>
+                                    <input type="text" class="form-control border border-2 border-bottom border-primary" name="password" />
+                                </div>
+                                <div class="my-2">
+                                    <input type="submit" class="btn btn-primary" value="Login" />
+                                    <label class="btn btn-outline-primary border border-0">Forgot Password</label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row my-2">
+                        <div class="col-md-8 mx-auto">
+                            <h6>Not Registered? Sign Up</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> *@
+    <script src="https://kit.fontawesome.com/e6a8e37cff.js" crossorigin="anonymous"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    @* <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> *@
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>

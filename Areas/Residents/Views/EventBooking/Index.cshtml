@@ -1,0 +1,139 @@
+﻿@{
+    ViewData["Title"] = "Events";
+    var eventList = ViewData["data"] as List<Event>;
+    var unbookedEventList = ViewData["dataUnbooked"] as List<Event>;
+}
+
+<div class="container-fluid">
+    <div class="row text-center">
+        <div class="col-12 mt-4">
+            <div class="card mb-4">
+                <div class="card-body p-3">
+                    <div class="row">
+                        <div class="card-header pb-0 p-3">
+                            <a class="text-body text-end text-sm font-weight-bold mb-0 icon-move-right my-2" href="/Residents/EventBooking/MyEvents">
+                                My Participation
+                                <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
+                            </a>
+                            <h6 class="mb-1">Upcomming Events</h6>
+                        </div>
+                        @foreach (Event item in unbookedEventList)
+                        {
+                            if (item.Start > DateTime.Now)
+                            {
+                                <div class="col-lg-4">
+                                    <div class="card h-100 p-3">
+                                      
+                                        <div class="overflow-hidden position-relative border-radius-lg bg-cover h-100" style="background-image: url('~/images/2b5c98a7-874a-4452-abc2-abf6710c3088.jpg');">
+                                        
+                                            <span class="mask bg-gradient-primary"></span>
+                                            <div class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
+                                              
+                                                <h5 class="text-white font-weight-bolder mb-4 pt-2">@item.Subject</h5>
+                                                <p class="text-white">@item.Description</p>
+                                                @if (item.IsFullDay == true)
+                                                {
+                                                        <h5 class="text-white font-weight-bolder mb-4 pt-2">
+                                                            Date
+                                                        </h5>
+                                                    <p class="mb-4 text-white">
+                                                        @item.Start.Value.ToLongDateString()
+                                                    </p>
+                                                }
+                                                else
+                                                {
+                                                    <div class="d-flex">
+                                                        <div>
+                                                            <h5 class="text-white font-weight-bolder mb-4 pt-2">
+                                                                Starts On
+                                                            </h5>
+                                                            <p class="mb-4 text-white">
+                                                                @item.Start.Value.ToLongDateString()|
+                                                            </p>
+                                                        </div>
+                                                        <div>
+                                                            <h5 class="text-white font-weight-bolder mb-4 pt-2">
+                                                                Ends On
+                                                            </h5>
+                                                            <p class="mb-4 text-white">
+                                                                @item.End.Value.ToLongDateString()
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                }
+                                                @if(item.Fees==0)
+                                                {
+                                                    <a class="text-white text-sm font-weight-bold mb-0 mt-auto">
+                                                        Free
+                                                       
+                                                    </a>
+                                                }
+                                                else
+                                                {
+                                                <a class="text-white text-sm font-weight-bold mb-0 icon-move-right mt-auto" href="EventParticipation?id=@item.EventId">
+                                                    Participate
+                                                    <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
+                                                </a>
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
+                        <div class="card-header pb-0 p-3">
+                            <h6 class="mb-1">Previous Events</h6>
+                        </div>
+                        @foreach (var item in eventList)
+                        {
+                            if (item.End < DateTime.Now)
+                            {
+
+                                <div class="col-lg-4">
+                                    <div class="card h-100 p-3">
+                                        <div class="overflow-hidden position-relative border-radius-lg bg-cover h-100" style="background-image: url('~/images/2b5c98a7-874a-4452-abc2-abf6710c3088.jpg');">
+                                            <span class="mask bg-gradient-secondary"></span>
+                                            <div class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
+                                                <h5 class="text-white font-weight-bolder mb-4 pt-2">@item.Subject</h5>
+                                                <p class="text-white">@item.Description</p>
+                                                @if (item.IsFullDay == true)
+                                                {
+                                                        <h5 class="text-white font-weight-bolder mb-4 pt-2">
+                                                            Date</h5>
+                                                    <p class="mb-4 text-white">
+                                                        @item.Start.Value.ToLongDateString()
+                                                    </p>
+                                                }
+                                                else
+                                                {
+                                                    <div class="d-flex">
+                                                        <div>
+                                                            <h5 class="text-white font-weight-bolder mb-4 pt-2">
+                                                                Starts On
+                                                            </h5>
+                                                            <p class="mb-4 text-white">
+                                                                @item.Start.Value.ToLongDateString()|
+                                                            </p>
+                                                        </div>
+                                                        <div>
+                                                            <h5 class="text-white font-weight-bolder mb-4 pt-2">
+                                                                Ends On
+                                                            </h5>
+                                                            <p class="mb-4 text-white">
+                                                                @item.End.Value.ToLongDateString()
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

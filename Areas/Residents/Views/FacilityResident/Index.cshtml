@@ -1,0 +1,36 @@
+﻿@model IEnumerable<LodgeLink.Models.Facility>
+
+@{
+    ViewData["Title"] = "Amenities";
+    Layout = "~/Areas/Residents/Views/Shared/_Layout.cshtml";
+}
+<div class="container-fluid py-4">
+    <a class="text-body text-end text-sm font-weight-bold icon-move-right my-3" href="/Residents/FacilityResident/BookedEmenities">
+        Booked Amenities
+        <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
+    </a>
+    <div class="row">
+        @foreach(var item in Model)
+        {
+            <div class="col-xl-3 col-md-6 mb-3">
+                <div class="card">
+                    <div class="position-relative mb-3">
+                        <a class="d-block shadow-xl border-radius-xl">
+                            <img src="@item.ImageURL" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
+                        </a>
+                    </div>
+                    <div class="card-body pt-0 p-3 text-center">
+                        <h6 class="text-center mb-0">@item.FacilityName</h6>
+                        <span class="text-xs">@item.Description</span>
+                        <hr class="horizontal dark my-3">
+                        <div class="col-8 mx-auto">
+                            <a class="btn bg-gradient-dark mb-0" href="Create?id=@item.FacilityId">
+                                Book Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

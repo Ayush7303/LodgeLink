@@ -1,0 +1,34 @@
+﻿@model IEnumerable<LodgeLink.Models.EventParticipant>
+
+@{
+    ViewData["Title"] = "My Events";
+    Layout = "~/Areas/Residents/Views/Shared/_Layout.cshtml";
+    System.Globalization.DateTimeFormatInfo date = new System.Globalization.DateTimeFormatInfo();
+}
+<div class="container-fluid my-3">
+    <div class="row">
+        @foreach(var item in Model)
+        {   
+            <div class="col-lg-4 col-md-4 my-3 ">
+                <div class="card bg-gradient-dark move-on-hover">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <h5 class="mb-0 text-white">@item.Event.Subject</h5>
+                            <div class="ms-auto">
+                                <h1 class="text-white text-end mb-0 mt-n2">@item.Event.Start.Value.Day</h1>
+                                <p class="text-sm mb-0 text-white">@date.GetMonthName(item.Event.Start.Value.Month).ToString()</p>
+                            </div>
+                        </div>
+                        <p class="text-white mb-0">@item.Event.Description</p>
+                    </div>
+                    @if(item.Event.Start > DateTime.Now)
+                    {
+                        <a href="/Residents/EventBooking/Delete?id=@item.ParticipantId" class="w-100 text-center text-white py-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Show More">
+                            Cancel Participation
+                        </a>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,89 @@
+﻿@model IEnumerable<LodgeLink.Models.Role>
+
+@{
+    ViewData["Title"] = "Roles";
+}
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <!-- Navbar -->
+        <!-- /.navbar -->
+        <!-- Main Sidebar Container -->
+        <!-- Content Wrapper. Contains page content -->
+        <p>
+            <a asp-action="Create">Create New</a>
+        </p>
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <table id="example1" class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.RoleName)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.RoleDescription)
+                                            </th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.RoleName)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.RoleDescription)
+                                                </td>
+                                                <td>
+                                                    <a asp-action="Edit" asp-route-id="@item.RoleId"><i class="nav-icon fa-regular fa-pen-to-square"></i></a> |
+                                                    <a asp-action="Delete" asp-route-id="@item.RoleId"><i class="nav-icon fa-regular fa-trash-can"></i></a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                    @*  <tfoot>
+                                    <tr>
+                                    <th>Rendering engine</th>
+                                    <th>Browser</th>
+                                    <th>Platform(s)</th>
+                                    <th>Engine version</th>
+                                    <th>CSS grade</th>
+                                    </tr>
+                                    </tfoot> *@
+                                </table>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <!-- ./wrapper -->
+    <script src="~/plugins/jquery/jquery.min.js"></script>
+
+    <!-- Page specific script -->
+    <script>
+        $(function () {
+            $("#example1").DataTable({
+                "responsive": true, "lengthChange": false, "autoWidth": false,
+                // "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+                "buttons": ["excel", "pdf", "print"]
+
+            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+        });
+    </script>
+</body>

@@ -1,0 +1,581 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = LodgeLink
+build_property.RootNamespace = LodgeLink
+build_property.ProjectDir = F:\Project\LodgeLink\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = F:\Project\LodgeLink
+build_property._RazorSourceGeneratorDebug = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Announcements/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQW5ub3VuY2VtZW50c1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Announcements/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQW5ub3VuY2VtZW50c1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Announcements/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQW5ub3VuY2VtZW50c1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Announcements/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQW5ub3VuY2VtZW50c1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Announcements/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQW5ub3VuY2VtZW50c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/ApproveRequests/ApprovedRequests.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXBwcm92ZVJlcXVlc3RzXEFwcHJvdmVkUmVxdWVzdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/ApproveRequests/ApproveRequests.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXBwcm92ZVJlcXVlc3RzXEFwcHJvdmVSZXF1ZXN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/ApproveRequests/RefusedArchitecturalRequest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXBwcm92ZVJlcXVlc3RzXFJlZnVzZWRBcmNoaXRlY3R1cmFsUmVxdWVzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/BillsPayments/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmlsbHNQYXltZW50c1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/BillsPayments/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmlsbHNQYXltZW50c1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/BillsPayments/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmlsbHNQYXltZW50c1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/BillsPayments/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmlsbHNQYXltZW50c1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/BillsPayments/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmlsbHNQYXltZW50c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Bills/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmlsbHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Bills/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmlsbHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Bills/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmlsbHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Bills/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmlsbHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Bills/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmlsbHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Buildings/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQnVpbGRpbmdzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Buildings/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQnVpbGRpbmdzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Buildings/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQnVpbGRpbmdzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Buildings/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQnVpbGRpbmdzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Credentials/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ3JlZGVudGlhbHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/EventManageAdmin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRXZlbnRNYW5hZ2VBZG1pblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/EventParticipantAdmin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRXZlbnRQYXJ0aWNpcGFudEFkbWluXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Facilities/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmFjaWxpdGllc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Facilities/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmFjaWxpdGllc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Facilities/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmFjaWxpdGllc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Facilities/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmFjaWxpdGllc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/FacilityBookingAdmin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmFjaWxpdHlCb29raW5nQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/FacilityRequest/ApprovedFacilityRequests.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmFjaWxpdHlSZXF1ZXN0XEFwcHJvdmVkRmFjaWxpdHlSZXF1ZXN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/FacilityRequest/ApproveFacilityRequests.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmFjaWxpdHlSZXF1ZXN0XEFwcHJvdmVGYWNpbGl0eVJlcXVlc3RzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Home/AdminProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxBZG1pblByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Properties/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvcGVydGllc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Properties/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvcGVydGllc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Properties/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvcGVydGllc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Properties/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvcGVydGllc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Residents/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUmVzaWRlbnRzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Residents/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUmVzaWRlbnRzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Residents/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUmVzaWRlbnRzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Residents/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUmVzaWRlbnRzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Residents/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUmVzaWRlbnRzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Roles/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUm9sZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Roles/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUm9sZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Roles/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUm9sZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Roles/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUm9sZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Shared/_Notifications.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9Ob3RpZmljYXRpb25zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Users/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlcnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Users/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlcnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Users/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlcnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Users/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlcnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/VisitorLog/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVmlzaXRvckxvZ1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/VisitorLog/_VisitorListPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVmlzaXRvckxvZ1xfVmlzaXRvckxpc3RQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Events/Views/EventManage/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRXZlbnRzXFZpZXdzXEV2ZW50TWFuYWdlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Events/Views/EventParticipants/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRXZlbnRzXFZpZXdzXEV2ZW50UGFydGljaXBhbnRzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Events/Views/Events/EventManagerProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRXZlbnRzXFZpZXdzXEV2ZW50c1xFdmVudE1hbmFnZXJQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Events/Views/Events/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRXZlbnRzXFZpZXdzXEV2ZW50c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Events/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRXZlbnRzXFZpZXdzXFNoYXJlZFxFcnJvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Events/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRXZlbnRzXFZpZXdzXFNoYXJlZFxfVmFsaWRhdGlvblNjcmlwdHNQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Events/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRXZlbnRzXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Events/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRXZlbnRzXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Identity/Views/Identity/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcSWRlbnRpdHlcQ2hhbmdlUGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Identity/Views/Identity/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcSWRlbnRpdHlcRm9yZ290UGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Identity/Views/Identity/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcSWRlbnRpdHlcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Identity/Views/Identity/_LoginError.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcSWRlbnRpdHlcX0xvZ2luRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/RequestManager/Views/ArchitecturalManagement/ApproveArchitecturalRequest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVxdWVzdE1hbmFnZXJcVmlld3NcQXJjaGl0ZWN0dXJhbE1hbmFnZW1lbnRcQXBwcm92ZUFyY2hpdGVjdHVyYWxSZXF1ZXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/RequestManager/Views/ArchitecturalManagement/ApprovedArchitecturalRequest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVxdWVzdE1hbmFnZXJcVmlld3NcQXJjaGl0ZWN0dXJhbE1hbmFnZW1lbnRcQXBwcm92ZWRBcmNoaXRlY3R1cmFsUmVxdWVzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/RequestManager/Views/ArchitecturalManagement/RefusedArchitecturalRequest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVxdWVzdE1hbmFnZXJcVmlld3NcQXJjaGl0ZWN0dXJhbE1hbmFnZW1lbnRcUmVmdXNlZEFyY2hpdGVjdHVyYWxSZXF1ZXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/RequestManager/Views/MaintenanceManagement/CompletedIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVxdWVzdE1hbmFnZXJcVmlld3NcTWFpbnRlbmFuY2VNYW5hZ2VtZW50XENvbXBsZXRlZEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/RequestManager/Views/MaintenanceManagement/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVxdWVzdE1hbmFnZXJcVmlld3NcTWFpbnRlbmFuY2VNYW5hZ2VtZW50XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/RequestManager/Views/MaintenanceManagement/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVxdWVzdE1hbmFnZXJcVmlld3NcTWFpbnRlbmFuY2VNYW5hZ2VtZW50XERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/RequestManager/Views/MaintenanceManagement/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVxdWVzdE1hbmFnZXJcVmlld3NcTWFpbnRlbmFuY2VNYW5hZ2VtZW50XERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/RequestManager/Views/MaintenanceManagement/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVxdWVzdE1hbmFnZXJcVmlld3NcTWFpbnRlbmFuY2VNYW5hZ2VtZW50XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/RequestManager/Views/MaintenanceManagement/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVxdWVzdE1hbmFnZXJcVmlld3NcTWFpbnRlbmFuY2VNYW5hZ2VtZW50XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/RequestManager/Views/RequestManagerHome/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVxdWVzdE1hbmFnZXJcVmlld3NcUmVxdWVzdE1hbmFnZXJIb21lXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/RequestManager/Views/RequestManagerHome/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVxdWVzdE1hbmFnZXJcVmlld3NcUmVxdWVzdE1hbmFnZXJIb21lXFByaXZhY3kuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/RequestManager/Views/RequestManagerHome/ReqManagerProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVxdWVzdE1hbmFnZXJcVmlld3NcUmVxdWVzdE1hbmFnZXJIb21lXFJlcU1hbmFnZXJQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/RequestManager/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVxdWVzdE1hbmFnZXJcVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/RequestManager/Views/Shared/_ReqManagerNotification.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVxdWVzdE1hbmFnZXJcVmlld3NcU2hhcmVkXF9SZXFNYW5hZ2VyTm90aWZpY2F0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/RequestManager/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVxdWVzdE1hbmFnZXJcVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/RequestManager/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVxdWVzdE1hbmFnZXJcVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/RequestManager/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVxdWVzdE1hbmFnZXJcVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/RequestStaff/Views/AllMaintenanceRequest/CompletedMaintenanceRequest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVxdWVzdFN0YWZmXFZpZXdzXEFsbE1haW50ZW5hbmNlUmVxdWVzdFxDb21wbGV0ZWRNYWludGVuYW5jZVJlcXVlc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/RequestStaff/Views/AllMaintenanceRequest/PendingMaintenanceRequest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVxdWVzdFN0YWZmXFZpZXdzXEFsbE1haW50ZW5hbmNlUmVxdWVzdFxQZW5kaW5nTWFpbnRlbmFuY2VSZXF1ZXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/RequestStaff/Views/RequestStaffHome/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVxdWVzdFN0YWZmXFZpZXdzXFJlcXVlc3RTdGFmZkhvbWVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/RequestStaff/Views/RequestStaffHome/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVxdWVzdFN0YWZmXFZpZXdzXFJlcXVlc3RTdGFmZkhvbWVcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/RequestStaff/Views/RequestStaffHome/ReqStaffProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVxdWVzdFN0YWZmXFZpZXdzXFJlcXVlc3RTdGFmZkhvbWVcUmVxU3RhZmZQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/RequestStaff/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVxdWVzdFN0YWZmXFZpZXdzXFNoYXJlZFxFcnJvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/RequestStaff/Views/Shared/_ReqStaffNotification.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVxdWVzdFN0YWZmXFZpZXdzXFNoYXJlZFxfUmVxU3RhZmZOb3RpZmljYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/RequestStaff/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVxdWVzdFN0YWZmXFZpZXdzXFNoYXJlZFxfVmFsaWRhdGlvblNjcmlwdHNQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/RequestStaff/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVxdWVzdFN0YWZmXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/RequestStaff/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVxdWVzdFN0YWZmXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Residents/Views/BillsResident/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVzaWRlbnRzXFZpZXdzXEJpbGxzUmVzaWRlbnRcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Residents/Views/BillsResident/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVzaWRlbnRzXFZpZXdzXEJpbGxzUmVzaWRlbnRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Residents/Views/BillsResident/PaymentView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVzaWRlbnRzXFZpZXdzXEJpbGxzUmVzaWRlbnRcUGF5bWVudFZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Residents/Views/EventBooking/EventParticipation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVzaWRlbnRzXFZpZXdzXEV2ZW50Qm9va2luZ1xFdmVudFBhcnRpY2lwYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Residents/Views/EventBooking/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVzaWRlbnRzXFZpZXdzXEV2ZW50Qm9va2luZ1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Residents/Views/EventBooking/MyEvents.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVzaWRlbnRzXFZpZXdzXEV2ZW50Qm9va2luZ1xNeUV2ZW50cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Residents/Views/EventBooking/PaymentViewEvent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVzaWRlbnRzXFZpZXdzXEV2ZW50Qm9va2luZ1xQYXltZW50Vmlld0V2ZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Residents/Views/FacilityResident/BookedEmenities.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVzaWRlbnRzXFZpZXdzXEZhY2lsaXR5UmVzaWRlbnRcQm9va2VkRW1lbml0aWVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Residents/Views/FacilityResident/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVzaWRlbnRzXFZpZXdzXEZhY2lsaXR5UmVzaWRlbnRcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Residents/Views/FacilityResident/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVzaWRlbnRzXFZpZXdzXEZhY2lsaXR5UmVzaWRlbnRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Residents/Views/FacilityResident/PaymentViewFacility.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVzaWRlbnRzXFZpZXdzXEZhY2lsaXR5UmVzaWRlbnRcUGF5bWVudFZpZXdGYWNpbGl0eS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Residents/Views/HomeResident/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVzaWRlbnRzXFZpZXdzXEhvbWVSZXNpZGVudFxEYXNoYm9hcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Residents/Views/HomeResident/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVzaWRlbnRzXFZpZXdzXEhvbWVSZXNpZGVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Residents/Views/HomeResident/ResidentProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVzaWRlbnRzXFZpZXdzXEhvbWVSZXNpZGVudFxSZXNpZGVudFByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Residents/Views/Request/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVzaWRlbnRzXFZpZXdzXFJlcXVlc3RcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Residents/Views/Request/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVzaWRlbnRzXFZpZXdzXFJlcXVlc3RcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Residents/Views/ResidentInformation/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVzaWRlbnRzXFZpZXdzXFJlc2lkZW50SW5mb3JtYXRpb25cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Residents/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVzaWRlbnRzXFZpZXdzXFNoYXJlZFxFcnJvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Residents/Views/Shared/_NotificationsResident.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVzaWRlbnRzXFZpZXdzXFNoYXJlZFxfTm90aWZpY2F0aW9uc1Jlc2lkZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Residents/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVzaWRlbnRzXFZpZXdzXFNoYXJlZFxfVmFsaWRhdGlvblNjcmlwdHNQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Residents/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVzaWRlbnRzXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Residents/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVzaWRlbnRzXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Security_Personnel/Views/HomeSecurity/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2VjdXJpdHlfUGVyc29ubmVsXFZpZXdzXEhvbWVTZWN1cml0eVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Security_Personnel/Views/HomeSecurity/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2VjdXJpdHlfUGVyc29ubmVsXFZpZXdzXEhvbWVTZWN1cml0eVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Security_Personnel/Views/HomeSecurity/SecurityProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2VjdXJpdHlfUGVyc29ubmVsXFZpZXdzXEhvbWVTZWN1cml0eVxTZWN1cml0eVByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Security_Personnel/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2VjdXJpdHlfUGVyc29ubmVsXFZpZXdzXFNoYXJlZFxFcnJvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Security_Personnel/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2VjdXJpdHlfUGVyc29ubmVsXFZpZXdzXFNoYXJlZFxfVmFsaWRhdGlvblNjcmlwdHNQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Security_Personnel/Views/Shared/_VisitorNotifications.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2VjdXJpdHlfUGVyc29ubmVsXFZpZXdzXFNoYXJlZFxfVmlzaXRvck5vdGlmaWNhdGlvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Security_Personnel/Views/Visitors/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2VjdXJpdHlfUGVyc29ubmVsXFZpZXdzXFZpc2l0b3JzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Security_Personnel/Views/Visitors/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2VjdXJpdHlfUGVyc29ubmVsXFZpZXdzXFZpc2l0b3JzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Security_Personnel/Views/Visitors/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2VjdXJpdHlfUGVyc29ubmVsXFZpZXdzXFZpc2l0b3JzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Security_Personnel/Views/Visitors/VisitorLog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2VjdXJpdHlfUGVyc29ubmVsXFZpZXdzXFZpc2l0b3JzXFZpc2l0b3JMb2cuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Security_Personnel/Views/Visitors/_VisitorListPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2VjdXJpdHlfUGVyc29ubmVsXFZpZXdzXFZpc2l0b3JzXF9WaXNpdG9yTGlzdFBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Security_Personnel/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2VjdXJpdHlfUGVyc29ubmVsXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Security_Personnel/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2VjdXJpdHlfUGVyc29ubmVsXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Project/LodgeLink/Areas/Admin/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-ua6ryy4q3e
+
+[F:/Project/LodgeLink/Areas/Events/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRXZlbnRzXFZpZXdzXFNoYXJlZFxfTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-6fshrm98yd
+
+[F:/Project/LodgeLink/Areas/RequestManager/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVxdWVzdE1hbmFnZXJcVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-7o0nfuypv9
+
+[F:/Project/LodgeLink/Areas/RequestStaff/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVxdWVzdFN0YWZmXFZpZXdzXFNoYXJlZFxfTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-qygabcw0vl
+
+[F:/Project/LodgeLink/Areas/Residents/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVzaWRlbnRzXFZpZXdzXFNoYXJlZFxfTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-c5y8biu5yh
+
+[F:/Project/LodgeLink/Areas/Residents/Views/Shared/_LayoutWithoutHeader.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUmVzaWRlbnRzXFZpZXdzXFNoYXJlZFxfTGF5b3V0V2l0aG91dEhlYWRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-wqf5tvvnbu
+
+[F:/Project/LodgeLink/Areas/Security_Personnel/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2VjdXJpdHlfUGVyc29ubmVsXFZpZXdzXFNoYXJlZFxfTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-4p6dmaj5d4

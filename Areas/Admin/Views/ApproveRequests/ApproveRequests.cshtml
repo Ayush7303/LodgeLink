@@ -1,0 +1,70 @@
+﻿@model List<LodgeLink.Models.ArchitecturalRequest>
+@{
+    ViewData["Title"] = "Pending Requests";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+
+}
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <table id="example1" class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Request Date</th>
+            <th>Description</th>
+            <!-- Add other columns as needed -->
+            <th>Action</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var request in Model)
+        {
+            <tr>
+                <td>@request.RequestDate</td>
+                <td>@request.Description</td>
+                <!-- Add other columns as needed -->
+                <td>
+                    <form asp-action="ApproveRequest" method="post">
+                        <input type="hidden" name="requestId" value="@request.RequestId" />
+                        <button type="submit" class="btn btn-success">Approve</button>
+                    </form>
+                </td>
+                <td>
+                    <form asp-action="RefuseRequest" method="post">
+                        <input type="hidden" name="requestId" value="@request.RequestId" />
+                        <button type="submit" class="btn btn-success">Refuse</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+    </div>
+</section>
+<script src="~/plugins/jquery/jquery.min.js"></script>
+
+<!-- Page specific script -->
+<script>
+    $(function () {
+        $("#example1").DataTable({
+            "responsive": true, "lengthChange": false, "autoWidth": false,
+            // "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+            "buttons": ["excel", "pdf", "print"]
+
+        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+    });
+</script>

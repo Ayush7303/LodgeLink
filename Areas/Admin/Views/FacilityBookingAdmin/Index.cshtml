@@ -1,0 +1,62 @@
+﻿@{
+    ViewData["Title"] = "Facility Bookings";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@foreach (BookingRequest item in Model.Facility)
+{
+    <div id="accordion">
+        <div class="card card-primary">
+            <div class="card-header" style="background-color:black;color:white;">
+                <h4 class="card-title w-100">
+                    <a class="d-block w-100" data-toggle="collapse" href="#collapse+@item.FacilityId">
+                        @item.Facility.FacilityName
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse+@item.FacilityId" class="collapse show" data-parent="#accordion">
+                <div class="card-body">
+                    <table class="border-none w-100">
+                        <tbody>
+
+                            @foreach (BookingRequest item1 in Model.FacilityBooking)
+                            {
+                                @if (item1.FacilityId == item.FacilityId)
+                                {
+                                    <tr class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <div class="d-flex flex-column">
+                                                    <h6 class="mb-1 text-dark text-sm">@item1.Resident.FirstName</h6>
+                                                    <span class="text-xs">@item1.RequestDate</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex align-items-center font-weight-bold">
+                                                <h6 class="text-dark text-sm text-gradient">@item1.PaidAmount /-</h6>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex align-items-center font-weight-bold">
+                                                <h6 class="text-dark text-sm text-gradient">@item1.StartDate</h6>
+                                            </div>
+                                        </td><td>
+                                            <div class="d-flex align-items-center font-weight-bold">
+                                                <h6 class="text-dark text-sm text-gradient">@item1.EndDate</h6>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex align-items-center text-sm font-weight-bold">
+                                                <p class=" text-info text-gradient">Paid</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        </div>
+        }

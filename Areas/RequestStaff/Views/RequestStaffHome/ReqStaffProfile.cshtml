@@ -1,0 +1,197 @@
+﻿@model LodgeLink.Models.User
+@{
+    ViewData["Title"] = "Profile";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="~/css/profile.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container light-style flex-grow-1 container-p-y">
+        @*  <h4 class="font-weight-bold py-3 mb-4">
+        Account settings
+        </h4> *@
+        <div class="card overflow-hidden">
+            <div class="row no-gutters row-bordered row-border-light">
+                <div class="col-md-3 pt-0">
+                    <div class="list-group list-group-flush account-settings-links">
+                        <a class="list-group-item list-group-item-action active" data-toggle="list"
+                           href="#account-general">General</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list"
+                           href="#account-change-password">Change password</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list"
+                           href="#account-info">Info</a>
+
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="tab-content">
+                        <div class="tab-pane fade active show" id="account-general">
+                            <form method="post" asp-action="UpdateProfilePicture" enctype="multipart/form-data">
+                                <div class="card-body media align-items-center">
+                                    <img src="@Model.ProfilePicture" alt="Profile Image" class="d-block ui-w-80">
+                                    <div class="media-body ml-4">
+                                        <div class="form-group">
+                                            <label class="btn btn-outline-primary">
+                                                Change picture
+                                                <input type="file" name="file" class="account-settings-fileinput">
+                                            </label>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <hr class="border-light m-0">
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label class="form-label">Username</label>
+                                    <input type="text" id="usernameInput" class="form-control mb-1" value="@Model.UserName">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">First Name</label>
+                                    <input type="text" id="firstNameInput" class="form-control" value="@Model.FirstName">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Last Name</label>
+                                    <input type="text" id="lastNameInput" class="form-control" value="@Model.LastName">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">E-mail</label>
+                                    <input type="text" id="emailInput" class="form-control" value="@Model.Email">
+                                </div>
+                                <button id="updateButton" class="btn btn-primary">Update</button>
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="account-change-password">
+                            <div class="card-body pb-2">
+                                <div class="form-group">
+                                    <label class="form-label">Current password</label>
+                                    <input type="password" id="currentPassword" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">New password</label>
+                                    <input type="password" id="newPassword" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Repeat new password</label>
+                                    <input type="password" id="repeatNewPassword" class="form-control">
+                                </div>
+                                <button id="changePasswordButton" class="btn btn-primary">Change Password</button>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="account-info">
+                            <div class="card-body pb-2">
+                                <div class="form-group">
+                                    <label class="form-label">Address</label>
+                                    <textarea id="address" class="form-control" rows="5">@Model.Address</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Contact Number</label>
+                                    <input id="contactNumber" type="text" class="form-control" value="@Model.ContactNumber">
+                                </div>
+                                <button id="updateInfoButton" class="btn btn-primary">Update Information</button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#updateButton").click(function () {
+                var updatedData = {
+                    UserName: $("#usernameInput").val(),
+                    FirstName: $("#firstNameInput").val(),
+                    LastName: $("#lastNameInput").val(),
+                    Email: $("#emailInput").val()
+                };
+
+                $.ajax({
+                    url: "/RequestStaff/RequestStaffHome/UpdateUserData",
+                    type: "POST",
+                    contentType: "application/json",
+                    data: JSON.stringify(updatedData),
+                    success: function (result) {
+                        // Handle success
+                        alert(result.message);
+
+                        console.log(result.message);
+
+                    },
+                    error: function (error) {
+                        // Handle error
+                        console.error("Error updating data:", error);
+                    }
+                });
+            });
+            $("#updateInfoButton").click(function () {
+                var address = $("#address").val();
+                var contactNumber = $("#contactNumber").val();
+
+                var data = {
+                    address: address,
+                    contactNumber: contactNumber
+                };
+
+                $.ajax({
+                    url: "/RequestStaff/RequestStaffHome/UpdateInfo", // Update with your controller and action
+                    type: "POST",
+                    contentType: "application/json",
+                    data: JSON.stringify(data),
+                    success: function (result) {
+                        // Handle success
+                        alert(result.message);
+                        console.log(result.message);
+                    },
+                    error: function (error) {
+                        // Handle error
+                        console.error("Error updating information:", error);
+                    }
+                });
+            });
+            $("#changePasswordButton").click(function () {
+                var data = {
+                    currentPassword: $("#currentPassword").val(),
+                    newPassword: $("#newPassword").val(),
+                    repeatNewPassword: $("#repeatNewPassword").val()
+                };
+
+                $.ajax({
+                    url: "/RequestStaff/RequestStaffHome/ChangePassword", // Update with your controller and action
+                    type: "POST",
+                    contentType: "application/json",
+                    data: JSON.stringify(data),
+                    success: function (result) {
+                        alert(result.message);
+
+                        // Handle success
+                        console.log(result.message);
+                    },
+                    error: function (error) {
+                        // Handle error
+                        alert("Error changing password:");
+                        console.error("Error changing password:", error);
+                    }
+                });
+            });
+        });
+
+    </script>
+</body>
+</html>

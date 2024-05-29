@@ -1,0 +1,65 @@
+﻿@model LodgeLink.Models.Bill
+
+@{
+    ViewData["Title"] = "Create Bill";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<hr />
+<div class="card-body">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+      <div class="row">
+          <div class="col-md-6">
+                <div class="form-group my-3">
+                    <label class="control-label">Month-Range</label>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <input asp-for="DateRange" id="months" class="form-control" />
+                        </div>
+                        <div class="col-md-3">
+                            <button type="button" class="btn btn-info text-white" onclick="getLastMonth()">Last Month</button>
+                        </div>
+                    </div>
+                    <span asp-validation-for="DateRange" class="text-danger"></span>
+                </div>
+                <div class="form-group my-3">
+                    <label asp-for="DueDate" class="control-label"></label>
+                    <input asp-for="DueDate" class="form-control" />
+                    <span asp-validation-for="DueDate" class="text-danger"></span>
+                </div>
+                <div class="form-group my-3">
+                    <input type="submit" value="Generate" class="btn btn-primary" />
+                </div>
+          </div>
+      </div>
+       
+            
+       
+    </form>
+
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+<script>
+    function getMonths() {
+        let date = new Date(document.querySelector("#fromMonth").value + "-01");
+        let from = date.toLocaleDateString("default", { month: 'long' }) + " " + date.getFullYear();
+
+        date = new Date(document.querySelector("#toMonth").value + "-01");
+        let to = date.toLocaleDateString("default", { month: 'long' }) + " " + date.getFullYear();
+        document.querySelector("#months").value = from + " - " + to;
+    }
+
+    function getLastMonth() {
+        let date = new Date();
+        date.setMonth(date.getMonth() - 1);
+        document.querySelector("#months").value = date.toLocaleDateString("default", { month: 'long' }) + " " + date.getFullYear();
+    }
+</script>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

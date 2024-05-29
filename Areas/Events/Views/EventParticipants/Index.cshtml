@@ -1,0 +1,295 @@
+﻿
+@{
+    ViewData["Title"] = "Event Paticipants";
+    Layout = "~/Areas/Events/Views/Shared/_Layout.cshtml";
+}
+@foreach (EventParticipant item in Model.Event)
+    {
+<div id="accordion">
+    <div class="card card-primary" >
+            <div class="card-header" style="background-color:@item.Event.ThemeColor">
+            <h4 class="card-title w-100">
+                <a class="d-block w-100" data-toggle="collapse" href="#collapse+@item.EventId">
+                        @item.Event.Subject
+                </a>
+            </h4>
+        </div>
+        <div id="collapse+@item.EventId" class="collapse show" data-parent="#accordion">
+            <div class="card-body">
+              <table class="border-none w-100">
+                    <tbody>
+                       
+                    @foreach (EventParticipant item1 in Model.EventParticipants)
+                    {
+                                @if (item1.EventId==item.EventId)
+                                {
+                                    <tr class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <div class="d-flex flex-column">
+                                                    <h6 class="mb-1 text-dark text-sm">@item1.Resident.FirstName</h6>
+                                                    <span class="text-xs">@item1.RegistrationDate</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex align-items-center font-weight-bold">
+                                                <h6 class="text-dark text-sm text-gradient">@item1.PaidAmount /-</h6>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex align-items-center font-weight-bold">
+                                                <h6 class="text-dark text-sm text-gradient">@item1.Members Members</h6>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex align-items-center text-sm font-weight-bold">
+                                                <p class=" text-info text-gradient">Paid</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                                }
+                                </tbody>
+                            </table>
+            </div>
+        </div>
+    </div>
+   @*  <div class="card card-danger">
+        <div class="card-header">
+            <h4 class="card-title w-100">
+                <a class="d-block w-100" data-toggle="collapse" href="#collapseTwo">
+                    Collapsible Group Danger
+                </a>
+            </h4>
+        </div>
+        <div id="collapseTwo" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                3
+                wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                laborum
+                eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee
+                nulla
+                assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+                nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+                beer
+                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                labore sustainable VHS.
+            </div>
+        </div>
+    </div>
+    <div class="card card-success">
+        <div class="card-header">
+            <h4 class="card-title w-100">
+                <a class="d-block w-100" data-toggle="collapse" href="#collapseThree">
+                    Collapsible Group Success
+                </a>
+            </h4>
+        </div>
+        <div id="collapseThree" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                3
+                wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                laborum
+                eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee
+                nulla
+                assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+                nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+                beer
+                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                labore sustainable VHS.
+            </div>
+        </div>
+    </div> *@
+</div>
+}
+@* <div class="container-fluid">
+    @foreach (var item in Model)
+    {
+        <div class="my-3">
+            <div class="card">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h6 class="d-flex">
+                                @item.Event.Subject &nbsp;
+                                    <span class="btn btn-icon-only btn-rounded btn-outline-info mb-0 me-3 btn-sm d-flex align-items-center justify-content-center"><i class="ni ni-check-bold"></i></span>
+                               
+                            </h6>
+                        </div>
+                        <div class="col-lg-6 text-end">
+                            <i class="ni ni-bold-down" data-bs-toggle="collapse" data-bs-target="#collapse-id-@item.ParticipantId" id="bill-icon-@item.EventId"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body collapse" id="collapse-id-@item.ParticipantId">
+                    <div class="row">
+                        <div class="col-lg-9">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <tr>
+                                        <td>
+                                            <h5 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Maintenence Cost</h5>
+                                        </td>
+                                        <td>₹ 200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h5 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Facility Charge</h5>
+                                        </td>
+                                        <td>₹ 200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h5 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Service Charge</h5>
+                                        </td>
+                                        <td>₹ 200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h5 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Late Charge</h5>
+                                        </td>
+                                        <td>₹ 200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h5 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Outstanding Charge</h5>
+                                        </td>
+                                        <td>₹ 200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h5 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Event Charge</h5>
+                                        </td>
+                                        <td>₹ 200</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card">
+
+                                
+                                    <div class="card-header mx-4 p-3 text-center">
+                                        <div class="icon icon-shape icon-lg bg-gradient-primary shadow text-center border-radius-lg">
+                                            <i class="fab fa-paypal opacity-10"></i>
+                                        </div>
+                                    </div>
+                                    <div class="card-body pt-0 p-3 text-center">
+                                        <h6 class="text-center mb-0">Paid</h6>
+                                        <span class="text-xs">Total Amount</span>
+                                        <hr class="horizontal dark my-3">
+                                        <h5 class="mb-0 text-info">₹ @item.PaidAmount</h5>
+                                    </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
+ *@
+@* <section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <table id="example1" class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Event)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Resident)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RegistrationDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Members)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PaidAmount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PaymentId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Feedback)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rating)
+            </th>
+            
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Event.Subject)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Resident.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RegistrationDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Members)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaidAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaymentId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Feedback)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rating)
+            </td>
+           
+        </tr>
+}
+    </tbody>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+    </div>
+</section>
+<script src="~/plugins/jquery/jquery.min.js"></script>
+
+<!-- Page specific script -->
+<script>
+    $(function () {
+        $("#example1").DataTable({
+            "responsive": true, "lengthChange": false, "autoWidth": false,
+            // "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+            "buttons": ["excel", "pdf", "print"]
+
+        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+    });
+</script>
+ *@

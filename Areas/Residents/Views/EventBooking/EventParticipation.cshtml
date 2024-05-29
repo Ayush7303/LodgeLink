@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Event Participation";
+    Layout = "~/Areas/Residents/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid mx-2 px-3 text-primary">
+    <div class="row my-2">
+        <div class="card">
+            <div class="card-bdoy">
+                <div class="col-lg-4 mx-auto my-3">
+                    <form asp-action="PaymentViewEvent" onsubmit="return checkMembers()">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <label class="control-label">Event</label>
+                            <input name="EventId" value="@Model.EventId" hidden />
+                            <select class="form-control">
+                                <option value="@Model.EventId" selected>@Model.Subject</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input value="@Model.ResidentId" class="form-control" name="ResidentId" hidden />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">How Many Members?</label>
+                            <input type="number" name="Members" class="form-control" oninput="calculateAmount(this.value)" id="members" />
+                            <h6 id="membersError"></h6>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Event Fees</label>
+                            <input type="number" name="Amount" id="Amount" value="@Model.Amount" class="form-control" onchange="changeAmount(this.value)" readonly />
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Participate" id="submit_id" class="btn btn-primary text-white" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function calculateAmount(members) {
+        let amount = @Model.Amount * members;
+        document.getElementById("Amount").value = amount;
+    }
+
+    function checkMembers() {
+        let members = document.getElementById("members").value;
+        let membersError = document.getElementById("membersError");
+        if (members === "") {
+            membersError.innerHTML = "Please Provide How many members will be joined!";
+            membersError.style.color = "red";
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+</script>

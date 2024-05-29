@@ -1,0 +1,186 @@
+﻿@using System.Text.Json;
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+            <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-info">
+                    <div class="inner">
+                        <h3>@ViewBag.buildingsCount</h3>
+
+                        <p>Buildings</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-building"></i>
+
+
+                    </div>
+                    <a href="@Url.Action("Index", "Buildings")" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-success">
+                    <div class="inner">
+                        @* <h3>53<sup style="font-size: 20px">%</sup></h3> *@
+                        <h3>@ViewBag.propertiesCount</h3>
+                        <p>Properties</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-home"></i>
+
+                    </div>
+                    <a href="@Url.Action("Index", "Properties")" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-warning">
+                    <div class="inner">
+                        <h3 id="residentsCount">@ViewBag.residentsCount</h3>
+
+                        <p>Residents</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <a href="@Url.Action("Index", "Residents")" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-danger">
+                    <div class="inner">
+                        <h3>@ViewBag.facilitiesCount</h3>
+
+                        <p>Facilities</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <a href="@Url.Action("Index", "Facilities")" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+
+        
+        </div>
+        <!-- /.row -->
+        <!-- Main row -->
+     </div>         
+                <!-- /.card -->
+
+
+@*     <div class="card card-primary card-outline">
+        <div class="card-header">
+            <h3 class="card-title">
+                <i class="far fa-chart-bar"></i>
+                Property Types
+            </h3>
+
+         
+        </div>
+        <div class="card-body">
+            <canvas id="propertyChart"></canvas>
+
+        </div>
+        <!-- /.card-body-->
+    </div>
+ *@
+    <div class="container-fluid my-3 text-primary">
+        <div class="row my-4">
+            <div class="col-lg-6 col-md-6 mb-md-0 mb-4">
+                <div class="card card-primary card-outline">
+                    <div class="card-header">
+                        <h3 class="card-title">
+                            <i class="far fa-chart-bar"></i>
+                            Property Types
+                        </h3>
+
+
+                    </div>
+                    <div class="card-body">
+                        <canvas id="propertyChart"></canvas>
+
+                    </div>
+                    <!-- /.card-body-->
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 mb-md-0 mb-4">
+                <div class="card card-primary card-outline">
+                    
+                    <div class="card-body">
+                        <canvas id="eventParticipantsChart" style="width: 800px; height: 300px;"></canvas>
+
+                    </div>
+                    <!-- /.card-body-->
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+    </section>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Add this script tag to include CountUp.js -->
+<script src="https://cdn.jsdelivr.net/npm/countup.js@1.9.3"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var residentialCount = @ViewBag.ResidentialCount;
+            var commercialCount = @ViewBag.CommercialCount;
+
+            var ctx = document.getElementById('propertyChart').getContext('2d');
+            var propertyChart = new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: ['Residential', 'Commercial'],
+                    datasets: [{
+                        data: [residentialCount, commercialCount],
+                        backgroundColor: ['rgba(75, 192, 192, 0.2)', 'rgba(255, 99, 132, 0.2)'],
+                        borderColor: ['rgba(75, 192, 192, 1)', 'rgba(255, 99, 132, 1)'],
+                        borderWidth: 1
+                    }]
+                }
+            });
+
+        var atx = document.getElementById('eventParticipantsChart').getContext('2d');
+
+        var eventParticipants = @Html.Raw(JsonSerializer.Serialize(ViewData["EventParticipants"]));
+
+        var eventData = {
+            labels: eventParticipants.map(ep => ep.EventName),
+            datasets: [{
+                data: eventParticipants.map(ep => ep.ParticipantsCount),
+                backgroundColor: ['#36A2EB', '#FF6384', '#FFCE56', '#8BC34A', '#673AB7'],
+                hoverBackgroundColor: ['#36A2EB', '#FF6384', '#FFCE56', '#8BC34A', '#673AB7'],
+            }]
+        };
+
+        var eventParticipantsChart = new Chart(atx, {
+            type: 'bar',
+            data: eventData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                            stepSize: 1
+                        }
+                    }]
+                },
+                title: {
+                    display: true,
+                    text: 'Event Participants Count'
+                },
+            },
+        });
+
+        });
+</script>

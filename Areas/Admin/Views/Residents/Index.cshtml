@@ -1,0 +1,61 @@
+﻿@model IEnumerable<LodgeLink.Models.Resident>
+
+@{
+    ViewData["Title"] = "Residents";
+}
+<section class="content">
+  @*   <p>
+        <a asp-action="Create">Create New</a>
+    </p> *@
+    <!-- Default box -->
+    <div class="card card-solid">
+        <div class="card-body pb-0">
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                    <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
+                        <div class="card bg-light d-flex flex-fill">
+                            <div class="card-header text-muted border-bottom-0">
+                                @Html.DisplayFor(modelItem => item.Property.PeopertyNumber)
+                            </div>
+                            <div class="card-body pt-0">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <h2 class="lead"><b>@Html.DisplayFor(modelItem => item.FirstName) @Html.DisplayFor(modelItem => item.LastName)</b></h2>
+                                        <ul class="ml-4 mb-0 fa-ul text-muted">
+                                            <li class="small"><span class="fa-li"><i class="fa-solid fa-cake-candles"></i></span> DateOfBirth: @Html.DisplayFor(modelItem => item.DateOfBirth)</li>
+                                            <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Phone +91: @Html.DisplayFor(modelItem => item.ContactNumber)</li>
+                                            <li class="small"><span class="fa-li"><i class="fa fa-envelope"></i></span> Email: @Html.DisplayFor(modelItem => item.Email)</li>
+                                            <li class="small"><span class="fa-li"><i class="fa-solid fa-suitcase-rolling"></i></span> DateOfMoveIn: @Html.DisplayFor(modelItem => item.DateOfMoveIn)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-5 text-center">
+                                        <img src="@Html.DisplayFor(modelItem => item.ProfileImage)" alt="user-avatar" class="img-circle img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="text-right">
+                                    <a asp-action="Details" asp-route-id="@item.ResidentId" class="btn btn-sm bg-primary">
+                                        <i class="fa-solid fa-circle-info"></i> Details
+                                    </a>
+                                    <a asp-action="Edit" asp-route-id="@item.ResidentId" class="btn btn-sm bg-teal">
+                                        <i class="fa-regular fa-pen-to-square"></i> Edit
+                                    </a>
+                                    <a asp-action="Delete" asp-route-id="@item.ResidentId" class="btn btn-sm btn-danger">
+                                        <i class="fa-regular fa-trash-can"></i> Delete
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+
+            </div>
+        </div>
+    </div>
+    <!-- /.card -->
+
+</section>
+<!-- /.content -->

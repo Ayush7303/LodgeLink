@@ -1,0 +1,87 @@
+﻿@model LodgeLink.Models.Bill
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>Bill</h4>
+<hr />
+<div class="card-body">
+
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="row">
+            <div class="col-md-6">
+            <input type="hidden" asp-for="BillId" />
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateRange" class="control-label"></label>
+                <input asp-for="DateRange" class="form-control" />
+                <span asp-validation-for="DateRange" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DueDate" class="control-label"></label>
+                <input asp-for="DueDate" class="form-control" />
+                <span asp-validation-for="DueDate" class="text-danger"></span>
+            </div>
+    </div>
+    <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Paid" class="control-label"></label>
+                <input asp-for="Paid" class="form-control" />
+                <span asp-validation-for="Paid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Unpaid" class="control-label"></label>
+                <input asp-for="Unpaid" class="form-control" />
+                <span asp-validation-for="Unpaid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreatedAt" class="control-label"></label>
+                <input asp-for="CreatedAt" class="form-control" />
+                <span asp-validation-for="CreatedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UpdatedAt" class="control-label"></label>
+                <input asp-for="UpdatedAt" class="form-control" />
+                <span asp-validation-for="UpdatedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+          </div>
+        </div>
+    </form>
+
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+<script>
+    function getMonths() {
+        let date = new Date(document.querySelector("#fromMonth").value + "-01");
+        let from = date.toLocaleDateString("default", { month: 'long' }) + " " + date.getFullYear();
+
+        date = new Date(document.querySelector("#toMonth").value + "-01");
+        let to = date.toLocaleDateString("default", { month: 'long' }) + " " + date.getFullYear();
+        document.querySelector("#months").value = from + " - " + to;
+    }
+
+    function getLastMonth() {
+        let date = new Date();
+        date.setMonth(date.getMonth() - 1);
+        document.querySelector("#months").value = date.toLocaleDateString("default", { month: 'long' }) + " " + date.getFullYear();
+    }
+</script>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

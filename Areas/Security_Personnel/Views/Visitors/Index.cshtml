@@ -1,0 +1,122 @@
+﻿@model IEnumerable<LodgeLink.Models.Visitor>
+
+@{
+    ViewData["Title"] = "Set CheckOut Time";
+    Layout = "~/Areas/Security_Personnel/Views/Shared/_Layout.cshtml";
+}
+<body class="hold-transition sidebar-mini">
+
+<div class="wrapper">
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <table id="example1" class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ImageURL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Property)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Property.Building)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VisitorName)
+            </th>           
+          
+            <th>
+                @Html.DisplayNameFor(model => model.ContactNumber)
+            </th>           
+            <th>
+                @Html.DisplayNameFor(model => model.CheckInTime)
+            </th>
+             <th>
+                @Html.DisplayNameFor(model => model.CheckOutTime)
+            </th>
+            <th></th>
+              <th>
+                @Html.DisplayNameFor(model => model.VisitDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Purpose)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VehicleDetails)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+                <td>
+                    <img class="img-circle" src=" @Html.DisplayFor(modelItem => item.ImageURL)" width="70" height="70">
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Property.PeopertyNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Property.Building.BuildingName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VisitorName)
+            </td>
+            
+            
+           
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactNumber)
+            </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.CheckInTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CheckOutTime)
+            </td>
+             <td>
+                <a asp-action="Edit" asp-route-id="@item.VisitorId">Set CheckoutTime</a>
+            </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.VisitDate)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Purpose)
+                                                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VehicleDetails)
+            </td>
+           
+           
+                                          
+        </tr>
+}
+    </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    </div>
+    <script src="~/plugins/jquery/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#example1").DataTable({
+                "responsive": true, "lengthChange": false, "autoWidth": false,
+              
+                        // "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+                "buttons": ["excel", "print"]
+
+            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+        });
+    </script>
+</body>

@@ -1,0 +1,34 @@
+﻿@model IEnumerable<LodgeLink.Models.Visitor>
+
+@{
+    ViewData["Title"] = "Visitor Log";
+}
+<div class="col-md-8 mb-3">
+    <input class="form-control form-control-lg" type="text" id="searchTerm" placeholder="Search" />
+</div>
+<div id="visitorList">
+
+    <!-- Initial visitor list rendering using the partial view -->
+    @await Html.PartialAsync("_VisitorListPartial", Model)
+</div>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        // Ajax call on input change
+        $("#searchTerm").on("input", function () {
+            var searchTerm = $(this).val();
+
+            $.ajax({
+                type: "POST",
+                url: "/Security_Personnel/Visitors/Search",
+                data: { searchTerm: searchTerm },
+                success: function (result) {
+                    // Update the visitor list with the search result
+                    $("#visitorList").html(result);
+                }
+            });
+        });
+    });
+</script>
+

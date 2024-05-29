@@ -1,0 +1,73 @@
+﻿@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container-fluid mx-2 px-3 text-primary">
+    <div class="row my-3 text-center">
+        <h2>New Requests</h2>
+    </div>
+    <div class="container-fluid py-2 px-5">
+        <h4>Bill</h4>
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="PaymentEdit" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group my-2">
+                        <input name="bill_id" type="hidden" class="form-control" value="@Model.Id" hidden />
+                        <input name="payment_id" type="hidden" class="form-control" id="payment_id" hidden />
+                        <input name="amount" class="form-control" value="@Model.Amount_Rs" readonly />
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary" id="rzp-button1">Pay</button>
+                        <input type="submit" class="hide" id="submit_id" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+    var options = {
+        "key": "@Model.Key", // Enter the Key ID generated from the Dashboard
+        "amount": "@Model.Amount", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+        "currency": "@Model.Currency",
+        "name": "LodgeLink", //your business name
+        "description": "Residency Management",
+        "image": "@Model.ImageURL",
+        "order_id": "@Model.OrderId", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+        "handler": function (response) {
+            alert("Payment Id : " + response.razorpay_payment_id);
+            document.getElementById("payment_id").value = response.razorpay_payment_id;
+            document.getElementById("submit_id").click();
+
+        },
+        "prefill": { //We recommend using the prefill parameter to auto-fill customer's contact information, especially their phone number
+            "name": "@Model.Name", //your customer's name
+            "email": "@Model.Email",
+            "contact": "@Model.Contact"  //Provide the customer's phone number for better conversion rates
+        },
+        "notes": {
+            "address": "@Model.Notes"
+        },
+        "theme": {
+            "color": "#3399cc"
+        }
+    };
+    var rzp1 = new Razorpay(options);
+    rzp1.on('payment.failed', function (response) {
+        alert(response.error.code);
+        alert(response.error.description);
+        alert(response.error.source);
+        alert(response.error.step);
+        alert(response.error.reason);
+        alert(response.error.metadata.order_id);
+        alert(response.error.metadata.payment_id);
+    });
+    document.getElementById('rzp-button1').onclick = function (e) {
+        rzp1.open();
+        e.preventDefault();
+    }
+</script>
+
